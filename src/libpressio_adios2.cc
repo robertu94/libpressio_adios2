@@ -10,7 +10,7 @@
 #include <numeric>
 #include "adios2.h"
 
-void libpressio_adios2_register() {
+extern "C" void libpressio_register_adios2() {
 }
 
 namespace libpressio { namespace adios2_io_ns {

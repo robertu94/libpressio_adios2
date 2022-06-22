@@ -1,6 +1,6 @@
 ## template for a CMake C++ Library
 cmake_minimum_required(VERSION 3.14)
-project(libpressio_adios2 VERSION "0.0.1" LANGUAGES CXX C)
+project(libpressio_adios2 VERSION "0.0.2" LANGUAGES CXX C)
 
 #correct was to set a default build type
 # https://blog.kitware.com/cmake-and-the-default-build-type/
@@ -97,7 +97,6 @@ configure_file(
   @ONLY
   )
 
-export(TARGETS libpressio_adios2 NAMESPACE libpressio_adios2:: FILE libpressio_adios2.cmake)
 install(TARGETS libpressio_adios2 EXPORT libpressio_adios2Targets
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
