@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include <adios2.h>
 #include <libpressio_ext/cpp/pressio.h>
+#include <libpressio_ext/cpp/io.h>
 #include <iostream>
 
 constexpr const char* filepath = CMAKE_PROJECT_SOURCE_DIR "/test/ADIOS2ADIOS1WriteADIOS1Read1D8.bp";

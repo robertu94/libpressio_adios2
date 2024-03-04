@@ -122,13 +122,14 @@ class adios2_plugin : public libpressio_io_plugin {
   struct pressio_options get_configuration_impl() const override {
     pressio_options opts;
     set(opts, "pressio:stability", "stable");
-    set(opts, "pressio:thread_safe", static_cast<int32_t>(pressio_thread_safety_multiple));
+    set(opts, "pressio:thread_safe", pressio_thread_safety_multiple);
     return opts;
   }
 
   struct pressio_options get_documentation_impl() const override {
     pressio_options opt;
     set(opt, "pressio:description", "uses ADIOS2 to read in mulitple steps of a dataset");
+    set(opt, "adios2:variable_name", "the variable name to read from an ADIOS2 file");
     return opt;
   }
 
